@@ -13,24 +13,29 @@ function App(this: any) {
           <div>
             <label> Convert Farenheit</label>
             <input
-              onChange={(event) => {
-                setTemp(parseInt(event.currentTarget.value));
-                setUnitsF(true);
-                console.log(temp, unitsF);
+              onKeyPress={(event) => {
+                if (event.key === "Enter") {
+                  setTemp(parseInt(event.currentTarget.value));
+                  setUnitsF(true);
+                  console.log(temp, unitsF);
+                }
               }}
             />
           </div>
 
           <label>Convert Celsius</label>
           <input
-            onChange={(event) => {
-              setTemp(parseInt(event.target.value));
-              setUnitsF(false);
-              console.log(temp, unitsF);
+            onKeyPress={(event) => {
+              if (event.key === "Enter") {
+                setTemp(parseInt(event.currentTarget.value));
+                setUnitsF(false);
+                console.log(temp, unitsF);
+                //let celFromFar=((temp - 32) * 5/9);
+              }
             }}
           />
         </form>
-        <div>{temp}</div>
+        <div className="temp-text">{temp}</div>
       </div>
     </div>
   );
@@ -40,3 +45,9 @@ export default App;
 
 //set up state
 //hook this into the click event
+
+// const conversion=(e)=>{
+// let celFromFar=(({temp} − 32) × 5/9);
+// let farFromCel=(({temp} × 9/5) + 32)
+
+// }

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App(this: any) {
-  const [unitsF, setUnitsF] = useState(true);
-  const [temp, setTemp] = useState(0);
+  const [input, setInput] = useState<UserInput>({ value: 0, units: "F" });
+
   return (
     <div className="App">
       <header className="App-header">Temperature Converter</header>
@@ -15,9 +15,10 @@ function App(this: any) {
             <input
               onKeyPress={(event) => {
                 if (event.key === "Enter") {
-                  setTemp(parseInt(event.currentTarget.value));
-                  setUnitsF(true);
-                  console.log(temp, unitsF);
+                  setInput({
+                    value: parseInt(event.currentTarget.value),
+                    units: "F",
+                  });
                 }
               }}
             />
@@ -27,15 +28,15 @@ function App(this: any) {
           <input
             onKeyPress={(event) => {
               if (event.key === "Enter") {
-                setTemp(parseInt(event.currentTarget.value));
-                setUnitsF(false);
-                console.log(temp, unitsF);
-                //let celFromFar=((temp - 32) * 5/9);
+                setInput({
+                  value: parseInt(event.currentTarget.value),
+                  units: "C",
+                });
               }
             }}
           />
         </form>
-        <div className="temp-text">{temp}</div>
+        <div className="temp-text">{JSON.stringify(input)}</div>
       </div>
     </div>
   );
@@ -51,3 +52,5 @@ export default App;
 // let farFromCel=(({temp} × 9/5) + 32)
 
 // }
+type TemperatureUnits = "F" | "C";
+type UserInput = { value: number; units: TemperatureUnits };

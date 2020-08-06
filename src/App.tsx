@@ -13,6 +13,7 @@ function App(this: any) {
           <div>
             <label> Convert Farenheit</label>
             <input
+              id="farenheitField"
               onKeyPress={(event) => {
                 if (event.key === "Enter") {
                   setInput({
@@ -26,12 +27,19 @@ function App(this: any) {
 
           <label>Convert Celsius</label>
           <input
+            id="celsiusField"
             onKeyPress={(event) => {
               if (event.key === "Enter") {
                 setInput({
                   value: parseInt(event.currentTarget.value),
                   units: "C",
                 });
+                let converted = conversion;
+
+                const changer = document.getElementById(
+                  "farenheitField"
+                ) as HTMLElement;
+                changer.innerText = "some biz";
               }
             }}
           />
@@ -47,10 +55,13 @@ export default App;
 //set up state
 //hook this into the click event
 
-// const conversion=(e)=>{
-// let celFromFar=(({temp} − 32) × 5/9);
-// let farFromCel=(({temp} × 9/5) + 32)
+const conversion = (units: TemperatureUnits, value: number) => {
+  if (units === "F") {
+    return (value * 9) / 5 + 32;
+  } else {
+    return ((value - 32) * 5) / 9;
+  }
+};
 
-// }
 type TemperatureUnits = "F" | "C";
 type UserInput = { value: number; units: TemperatureUnits };

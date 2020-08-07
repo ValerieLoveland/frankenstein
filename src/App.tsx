@@ -14,34 +14,26 @@ function App(this: any) {
             <label> Convert Farenheit</label>
             <input
               id="farenheitField"
-              onKeyPress={(event) => {
-                if (event.key === "Enter") {
-                  setInput({
-                    value: parseInt(event.currentTarget.value),
-                    units: "F",
-                  });
-                }
+              onChange={(event) => {
+                setInput({
+                  value: parseInt(event.currentTarget.value),
+                  units: "F",
+                });
               }}
+              value={conversionFromF(input.units, input.value)}
             />
           </div>
 
           <label>Convert Celsius</label>
           <input
             id="celsiusField"
-            onKeyPress={(event) => {
-              if (event.key === "Enter") {
-                setInput({
-                  value: parseInt(event.currentTarget.value),
-                  units: "C",
-                });
-                let converted = conversion;
-
-                const changer = document.getElementById(
-                  "farenheitField"
-                ) as HTMLElement;
-                changer.innerText = "some biz";
-              }
+            onChange={(event) => {
+              setInput({
+                value: parseInt(event.currentTarget.value),
+                units: "C",
+              });
             }}
+            value={conversionFromC(input.units, input.value)}
           />
         </form>
         <div className="temp-text">{JSON.stringify(input)}</div>
@@ -52,14 +44,19 @@ function App(this: any) {
 
 export default App;
 
-//set up state
-//hook this into the click event
+const conversionFromF = (units: TemperatureUnits, value: number) => {
+  if (units === "C") {
+    return value * 1.8 + 32;
+  } else if (units === "F") {
+    return value;
+  }
+};
 
-const conversion = (units: TemperatureUnits, value: number) => {
+const conversionFromC = (units: TemperatureUnits, value: number) => {
   if (units === "F") {
-    return (value * 9) / 5 + 32;
-  } else {
-    return ((value - 32) * 5) / 9;
+    return (value - 32) / 1.8;
+  } else if (units === "C") {
+    return value;
   }
 };
 

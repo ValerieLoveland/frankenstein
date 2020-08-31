@@ -2,15 +2,15 @@ import React from "react";
 
 import "./App.css";
 import { TempConvert } from "./TempConvert";
-import { CarBurn } from "./CarBurn";
+import { CarBurn, CarBurn2 } from "./CarBurn";
 import { Link, Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App(this: any) {
   return (
     <div className="App">
       <Router>
-        <nav className="bar">
-          <ul className="bar nobull">
+        <nav>
+          <ul className="bar">
             <li>
               <Link to="/temp-convert">TempConvert</Link>
             </li>
@@ -19,15 +19,17 @@ function App(this: any) {
             </li>
           </ul>
         </nav>
-        <Switch>
-          <Route path="/temp-convert">
-            <TempConvert />
-          </Route>
-          <Route path="/car-burn/:id" children={<CarBurn />} />
-          <Route path="/">
-            <div>Hello!</div>
-          </Route>
-        </Switch>
+        <main>
+          <Switch>
+            <Route path="/temp-convert">
+              <TempConvert />
+            </Route>
+            <Route path="/car-burn/:id" children={<CarBurn2 />} />
+            <Route path="/">
+              <div>Hello!</div>
+            </Route>
+          </Switch>
+        </main>
       </Router>
     </div>
   );

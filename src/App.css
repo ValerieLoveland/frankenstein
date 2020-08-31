@@ -1,4 +1,4 @@
-.App {
+main {
   min-height: 100vh;
   background-color: #e99b04;
   padding: 10px;
@@ -33,28 +33,36 @@
 }
 
 .bar {
-  margin: 0;
-  padding: 50px;
   background-color: black;
   color: white;
   display: flex;
   justify-content: space-around;
-  overflow: hidden;
   position: fixed;
-  top: 0;
   width: 100%;
-  height: 100px;
+  height: 50px;
   text-align: center;
   font-size: 23px;
-}
-a:visited {
-  color: white;
-}
-.nobull {
-  margin: 25px;
   list-style-type: none;
+  padding: 0;
+}
+a {
+  color: white;
+  text-decoration: none;
 }
 
-li {
-  display: inline;
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+ul {
+  /* display: inline; */
+  margin-block-start: 0;
+  margin-block-end: 0;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  padding: 10px;
 }

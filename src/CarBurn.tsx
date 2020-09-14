@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { Card } from "./Card";
 
-const numberOfResults = 2;
+const numberOfResults = 15;
 
 export const CarBurn: React.FC = (props) => {
   const [persons, setPersons] = useState<Person[]>([]);
@@ -9,53 +10,50 @@ export const CarBurn: React.FC = (props) => {
     fetch("https://randomuser.me/api/?results=" + numberOfResults).then(
       (response) => {
         response.json().then(function (data) {
-          setPersons({
-            name: data.results[0].name.first,
-            lastName: data.results[0].name.last,
-            userName: data.results[0].login.username,
-            avatar: data.results[0].picture.medium,
+          const persons = data.results.map((result: any) => {
+            return {
+              name: result.name.first,
+              lastName: result.name.last,
+              userName: result.login.username,
+              avatar: result.picture.medium,
+              gender: result.gender,
+            };
           });
+          setPersons(persons);
         });
       }
     );
   }, []);
 
-  return (
-    <>
-      <div className="card">
-        <div>
-          {persons.name} {persons.lastName}
-        </div>
-        <div>{persons.userName}</div>
-        {persons.avatar && (
-          <img src={persons.avatar} alt="headshot of person" />
-        )}
-      </div>
+  // const isFemale = (person: Person) => {
+  //   return person.gender === "female";
+  // }
 
-      {/* <div className="card">
-        <div>
-          {persons.name} {persons.lastName}
-        </div>
-        <div>{persons.userName}</div>
-        {persons.avatar && (
-          <img src={persons.avatar} alt="headshot of person" />
-        )}
-      </div> */}
-    </>
+  const filterPeople = persons.filter((person) => {
+    return person.gender === "female";
+  });
+  //const filterPeople = persons.filter((p) => p.gender === "female");
+
+  const listItems = filterPeople.map((person) => (
+    <li key={person.userName}>
+      <Card person={person} />
+    </li>
+  ));
+
+  const namesReducer = persons.reduce(
+    (accumulatedNames: string, person: Person) => {
+      return accumulatedNames + person.name;
+    },
+    ""
   );
+
+  return <ul className="ul-style">{[listItems, namesReducer]}</ul>;
 };
 
-type Person = {
-  name: string | null;
-  lastName: string | null;
-  userName: string | null;
-  avatar: string | null;
-};
-
-export const CarBurn2: React.FC = () => {
-  return (
-    <>
-      <CarBurn />
-    </>
-  );
+export type Person = {
+  name: string;
+  lastName: string;
+  userName: string;
+  avatar: string;
+  gender: string;
 };

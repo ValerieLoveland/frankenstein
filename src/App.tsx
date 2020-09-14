@@ -1,16 +1,15 @@
 import React from "react";
-
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import "./App.css";
+import { CarBurn } from "./CarBurn";
 import { TempConvert } from "./TempConvert";
-import { CarBurn, CarBurn2 } from "./CarBurn";
-import { Link, Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App(this: any) {
   return (
     <div className="App">
       <Router>
         <nav>
-          <ul className="bar">
+          <ul className="bar ulStyle">
             <li>
               <Link to="/temp-convert">TempConvert</Link>
             </li>
@@ -24,7 +23,7 @@ function App(this: any) {
             <Route path="/temp-convert">
               <TempConvert />
             </Route>
-            <Route path="/car-burn/:id" children={<CarBurn2 />} />
+            <Route path="/car-burn/:id" children={<CarBurn />} />
             <Route path="/">
               <div>Hello!</div>
             </Route>

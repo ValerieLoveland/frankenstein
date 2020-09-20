@@ -34,20 +34,19 @@ export const CarBurn: React.FC = (props) => {
   });
   //const filterPeople = persons.filter((p) => p.gender === "female");
 
-  const listItems = filterPeople.map((person) => (
+  // const listItems = filterPeople.map((person) => (
+  //   <li key={person.userName}>
+  //     <Card person={person} />
+  //   </li>
+  // ));
+
+  const listItems = map(filterPeople, (person) => (
     <li key={person.userName}>
       <Card person={person} />
     </li>
   ));
 
-  const namesReducer = persons.reduce(
-    (accumulatedNames: string, person: Person) => {
-      return accumulatedNames + person.name;
-    },
-    ""
-  );
-
-  return <ul className="ul-style">{[listItems, namesReducer]}</ul>;
+  return <ul className="ul-style">{listItems}</ul>;
 };
 
 export type Person = {
@@ -57,3 +56,13 @@ export type Person = {
   avatar: string;
   gender: string;
 };
+
+function map<T, R>(arr: T[], iteratee: (item: T) => R): R[] {
+  const newArr = [];
+  for (let index = 0; index < arr.length; index++) {
+    let result = iteratee(arr[index]);
+    newArr.push(result);
+  }
+
+  return newArr;
+}

@@ -30,7 +30,7 @@ export const CarBurn: React.FC = (props) => {
   // }
 
   const filterPeople = persons.filter((person) => {
-    return person.gender === "female";
+    return person.gender === "male";
   });
   //const filterPeople = persons.filter((p) => p.gender === "female");
 

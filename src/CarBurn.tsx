@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "./Card";
+import { Min } from "./Min";
 
 const numberOfResults = 15;
 
@@ -20,25 +21,15 @@ export const CarBurn: React.FC = (props) => {
             };
           });
           setPersons(persons);
+          FizzBuzz();
         });
       }
     );
   }, []);
 
-  // const isFemale = (person: Person) => {
-  //   return person.gender === "female";
-  // }
-
   const filterPeople = persons.filter((person) => {
     return person.gender === "female";
   });
-  //const filterPeople = persons.filter((p) => p.gender === "female");
-
-  // const listItems = filterPeople.map((person) => (
-  //   <li key={person.userName}>
-  //     <Card person={person} />
-  //   </li>
-  // ));
 
   const listItems = map(filterPeople, (person) => (
     <li key={person.userName}>
@@ -46,7 +37,12 @@ export const CarBurn: React.FC = (props) => {
     </li>
   ));
 
-  return <ul className="ul-style">{listItems}</ul>;
+  return (
+    <>
+      <ul className="ul-style">{listItems}</ul>
+      <div>{Min(2, 7)}</div>
+    </>
+  );
 };
 
 export type Person = {
@@ -65,4 +61,19 @@ function map<T, R>(arr: T[], iteratee: (item: T) => R): R[] {
   }
 
   return newArr;
+}
+
+export function FizzBuzz() {
+  for (let i = 0; i < 99; i++) {
+    let num = i + 1;
+    if (num % 3 === 0 && num % 5 === 0) {
+      console.log("fizzbuzz");
+    } else if (num % 3 === 0) {
+      console.log("fizz");
+    } else if (num % 5 === 0) {
+      console.log("buzz");
+    } else {
+      console.log(i + 1);
+    }
+  }
 }

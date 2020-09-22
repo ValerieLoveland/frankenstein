@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "./Card";
-import { Min } from "./Min";
 
 const numberOfResults = 15;
 
@@ -37,12 +36,7 @@ export const CarBurn: React.FC = (props) => {
     </li>
   ));
 
-  return (
-    <>
-      <ul className="ul-style">{listItems}</ul>
-      <div>{Min(2, 7)}</div>
-    </>
-  );
+  return <ul className="ul-style">{listItems}</ul>;
 };
 
 export type Person = {

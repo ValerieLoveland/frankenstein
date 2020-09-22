@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { CarBurn, FizzBuzz } from "./CarBurn";
+import { Min } from "./Min";
 import { TempConvert } from "./TempConvert";
 
 function App(this: any) {
@@ -16,9 +17,9 @@ function App(this: any) {
             <li>
               <Link to="/car-burn/1">Carburn</Link>
             </li>
-            {/* <li>
+            <li>
               <Link to="/min">Min</Link>
-            </li> */}
+            </li>
           </ul>
         </nav>
         <main>
@@ -26,7 +27,9 @@ function App(this: any) {
             <Route path="/temp-convert">
               <TempConvert />
             </Route>
-            {/* <Route path="/Min"><FizzBuzz /></Route> */}
+            <Route path="/min">
+              <Min />
+            </Route>
             <Route path="/car-burn/:id" children={<CarBurn />} />
             <Route path="/">
               <div>Hello!</div>

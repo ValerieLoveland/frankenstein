@@ -19,6 +19,7 @@ export const Min = () => {
             setMinInput1({
               input1: parseInt(event.currentTarget.value),
             });
+            determineMin(minInput1.input1, minInput2.input2);
           }}
         />
 
@@ -35,6 +36,9 @@ export const Min = () => {
       </form>
       <div>{JSON.stringify(minInput1)}</div>
       <div>{JSON.stringify(minInput2)}</div>
+      <div>
+        {JSON.stringify(determineMin(minInput1.input1, minInput2.input2))}
+      </div>
     </>
   );
 };

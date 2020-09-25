@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 
 export const Min = () => {
-  const [minInput1, setMinInput1] = useState({
-    input1: 0,
-  });
-  const [minInput2, setMinInput2] = useState({
-    input2: 0,
-  });
+  const [minInput1, setMinInput1] = useState(0);
+  const [minInput2, setMinInput2] = useState(0);
 
   return (
     <>
@@ -16,10 +12,7 @@ export const Min = () => {
         <label>First Number: </label>
         <input
           onChange={(event) => {
-            setMinInput1({
-              input1: parseInt(event.currentTarget.value),
-            });
-            determineMin(minInput1.input1, minInput2.input2);
+            setMinInput1(parseInt(event.currentTarget.value));
           }}
         />
 
@@ -27,18 +20,14 @@ export const Min = () => {
           <label>Second Number: </label>
           <input
             onChange={(event) => {
-              setMinInput2({
-                input2: parseInt(event.currentTarget.value),
-              });
+              setMinInput2(parseInt(event.currentTarget.value));
             }}
           />
         </div>
       </form>
       <div>{JSON.stringify(minInput1)}</div>
       <div>{JSON.stringify(minInput2)}</div>
-      <div>
-        {JSON.stringify(determineMin(minInput1.input1, minInput2.input2))}
-      </div>
+      <div>{JSON.stringify(determineMin(minInput1, minInput2))}</div>
     </>
   );
 };

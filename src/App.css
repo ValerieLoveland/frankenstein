@@ -71,3 +71,14 @@ a:hover {
 .mb-5 {
   margin-bottom: 5px;
 }
+
+.sub {
+  display: flex;
+  justify-content: flex-start;
+  height: 50px;
+  width: 800px;
+  text-align: center;
+  font-size: 23px;
+  list-style-type: none;
+  padding: 0;
+}

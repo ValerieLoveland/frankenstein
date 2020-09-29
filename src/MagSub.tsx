@@ -1,13 +1,19 @@
 import React from "react";
 
 export const MagSub = () => {
-  //const [sub, setSub] = useState("");
   return (
     <>
-      <header>Magazine Submissions</header>
-      <div>Poem Magazine Date Submitted</div>
-      <div>calculateDays</div>
-      <li>{submission("Frosties", "Poetry Magazine", "7/20/2020")}</li>
+      <h1>Magazine Submissions</h1>
+      <div className="ul-style form">
+        <div className="sub">
+          <div>Poem</div>
+          <div>Magazine</div>
+          <div>Date</div>
+          <div>Submitted</div>
+        </div>
+        <li>{submission("Frosties", "Poetry Magazine", "7/20/2020")}</li>
+        <li>{submission("Slap Bracelets", "Kenyon Review", "08/15/2020")}</li>
+      </div>
     </>
   );
 };
@@ -37,6 +43,3 @@ const calculateDays = (
   console.log(days);
   return days;
 };
-
-submission("Frosties", "Poetry Magazine", "7/20/2020");
-submission("Slap Bracelets", "Kenyon Review", "08/15/2020");

@@ -7,7 +7,7 @@ export const MagSub = () => {
       <header>Magazine Submissions</header>
       <div>Poem Magazine Date Submitted</div>
       <div>calculateDays</div>
-      <li>{}</li>
+      <li>{submission("Frosties", "Poetry Magazine", "7/20/2020")}</li>
     </>
   );
 };
@@ -16,7 +16,7 @@ const submission = function (
   poem: string,
   magazine: string,
   startDate: string
-) {
+): string {
   let alteredStartDate = Date.parse(startDate);
   let currentDate = Date.now();
   console.log(`altered ${alteredStartDate} current ${currentDate}`);
@@ -26,6 +26,7 @@ const submission = function (
   if (daysOut > 30) {
     console.log(`query ${magazine} about ${poem}`);
   }
+  return `query ${magazine} about ${poem}`;
 };
 
 const calculateDays = (

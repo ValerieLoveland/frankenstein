@@ -1,4 +1,5 @@
 import React from "react";
+import { JsxElement } from "typescript";
 
 export const MagSub = () => {
   return (
@@ -27,24 +28,43 @@ const submission = function (
   poem: string,
   magazine: string,
   startDate: string
-): string {
+) {
   let alteredStartDate = Date.parse(startDate);
   let currentDate = Date.now();
   console.log(`altered ${alteredStartDate} current ${currentDate}`);
 
   let daysOut = calculateDays(currentDate, alteredStartDate);
 
-  let subWithQuery = ` "${poem}" ${magazine} ${startDate}
-    
-    Query ${magazine} about "${poem}." It has been out ${daysOut} days.`;
+  // let subWithQuery = ` "${poem}" ${magazine} ${startDate}
 
-  let subNoQuery = ` "${poem}" ${magazine} ${startDate} ${daysOut}`;
+  //   Query ${magazine} about "${poem}." It has been out ${daysOut} days.`;
+
+  // let subNoQuery = ` "${poem}" ${magazine} ${startDate} ${daysOut}`;
 
   if (daysOut > 30) {
-    console.log(`Query ${magazine} about ${poem}`);
-    return subWithQuery;
+    //   console.log(`Query ${magazine} about ${poem}`);
+    //   return subWithQuery;
+    // } else {
+    return (
+      <>
+        <div>
+          {poem} {magazine}
+          {startDate}
+          {daysOut}
+        </div>
+        <div>
+          Query ${magazine} about "${poem}." It has been out ${daysOut} days.
+        </div>
+      </>
+    );
   } else {
-    return subNoQuery;
+    return (
+      <div>
+        {poem} {magazine}
+        {startDate}
+        {daysOut}
+      </div>
+    );
   }
 };
 

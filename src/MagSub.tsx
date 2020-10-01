@@ -4,30 +4,19 @@ export const MagSub = () => {
   return (
     <>
       <h1>Magazines to Query</h1>
-      <table className="table">
-        <div className="ul-style form">
-          <div className="sub">
-            <tr>
-              {" "}
-              <th>Poem</th> <th>Magazine</th> <th>Date</th> <th>Submitted </th>
-            </tr>
-          </div>
-          <tbody>
-            <ul>
-              <tr>
-                <li>
-                  {submission("Frosties", "Poetry Magazine", "7/20/2020")}
-                </li>
-              </tr>
-              <li>
-                {submission("Slap Bracelets", "Kenyon Review", "08/15/2020")}
-              </li>
-              <li>
-                {submission("Grabber", "American Poetry Review", "09/15/2020")}
-              </li>
-            </ul>
-          </tbody>
-        </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Poem</th> <th>Magazine</th> <th>Date</th> <th>Submitted </th>
+          </tr>
+        </thead>
+        <tbody>
+          {submission("Frosties", "Poetry Magazine", "7/20/2020")}
+
+          {submission("Slap Bracelets", "Kenyon Review", "08/15/2020")}
+
+          {submission("Grabber", "American Poetry Review", "09/15/2020")}
+        </tbody>
       </table>
     </>
   );
@@ -47,30 +36,27 @@ const submission = function (
   if (daysOut > 30) {
     return (
       <>
-        <div>
-          <table>
-            <tbody>
-              <tr className="table">
-                <td>{poem}</td>
-                <td>{magazine}</td>
-                <td>{startDate}</td>
-                <td>{daysOut}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div>
-          Query {magazine} about "{poem}." It has been out {daysOut} days.
-        </div>
+        <tr>
+          <td>{poem}</td>
+          <td>{magazine}</td>
+          <td>{startDate}</td>
+          <td>{daysOut}</td>
+        </tr>
+        <tr>
+          <td colSpan={4}>
+            Query {magazine} about "{poem}." It has been out {daysOut} days.
+          </td>
+        </tr>
       </>
     );
   } else {
     return (
-      <div>
-        {poem} {magazine}
-        {startDate}
-        {daysOut}
-      </div>
+      <tr>
+        <td>{poem}</td>
+        <td>{magazine}</td>
+        <td>{startDate}</td>
+        <td>{daysOut}</td>
+      </tr>
     );
   }
 };

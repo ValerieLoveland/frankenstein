@@ -73,18 +73,24 @@ a:hover {
 }
 
 .sub {
-  display: flex;
+  padding: 5px;
+  /* display: flex;
   justify-content: flex-start;
   height: 50px;
   width: 800px;
   text-align: center;
   font-size: 23px;
-  list-style-type: none;
-  padding: 0;
+  list-style-type: none; */
 }
 
-table,
+/* table,
 th,
 td {
   border: 1px solid black;
+} */
+
+td,
+th {
+  text-align: left;
+  padding: 15px 30px;
 }

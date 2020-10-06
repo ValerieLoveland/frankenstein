@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "./Card";
-import { MagSub } from "./MagSub";
 
-const numberOfResults = 15;
+const numberOfResults = 25;
 
 export const CardDisplay: React.FC = (props) => {
   const [persons, setPersons] = useState<Person[]>([]);
@@ -32,7 +31,7 @@ export const CardDisplay: React.FC = (props) => {
   });
 
   const listItems = map(filterPeople, (person) => (
-    <li key={person.userName}>
+    <li className="container y-scroll" key={person.userName}>
       <Card person={person} />
     </li>
   ));

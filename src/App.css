@@ -82,3 +82,8 @@ th {
   text-align: left;
   padding: 15px 30px;
 }
+
+.y-scroll .element {
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
+}

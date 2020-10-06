@@ -13,6 +13,9 @@ function App(this: any) {
         <nav>
           <ul className="bar">
             <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
               <Link to="/temp-convert">Temperature Converter</Link>
             </li>
             <li>

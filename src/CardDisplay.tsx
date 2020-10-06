@@ -4,7 +4,7 @@ import { MagSub } from "./MagSub";
 
 const numberOfResults = 15;
 
-export const CarBurn: React.FC = (props) => {
+export const CardDisplay: React.FC = (props) => {
   const [persons, setPersons] = useState<Person[]>([]);
 
   useEffect(() => {

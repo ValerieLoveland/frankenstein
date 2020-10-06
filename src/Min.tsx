@@ -6,9 +6,8 @@ export const Min = () => {
 
   return (
     <>
-      <form onSubmit={() => false}>
-        <header>Smallest Number</header>
-
+      <header>Smallest Number</header>
+      <form className="form" onSubmit={() => false}>
         <label>First Number: </label>
         <input
           onChange={(event) => {

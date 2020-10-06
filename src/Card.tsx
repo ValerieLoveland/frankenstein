@@ -1,4 +1,4 @@
-import { Person } from "./CarBurn";
+import { Person } from "./CardDisplay";
 import React from "react";
 
 export const Card: React.FC<CardProps> = (props) => {

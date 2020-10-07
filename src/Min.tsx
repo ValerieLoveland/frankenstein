@@ -6,27 +6,33 @@ export const Min = () => {
 
   return (
     <>
-      <header>Smallest Number</header>
-      <form className="form" onSubmit={() => false}>
-        <label>First Number: </label>
-        <input
-          onChange={(event) => {
-            setMinInput1(parseInt(event.currentTarget.value));
-          }}
-        />
+      <header className="App-header">Smallest Number Calculator</header>
+      <div className="form">
+        <form className="sub" onSubmit={() => false}>
+          <div>
+            <label>First Number: </label>
+            <input
+              onChange={(event) => {
+                setMinInput1(parseInt(event.currentTarget.value));
+              }}
+            />
+          </div>
 
+          <div>
+            <label>Second Number: </label>
+            <input
+              onChange={(event) => {
+                setMinInput2(parseInt(event.currentTarget.value));
+              }}
+            />
+          </div>
+        </form>
+        {/* <div>{JSON.stringify(minInput1)}</div>
+      <div>{JSON.stringify(minInput2)}</div> */}
         <div>
-          <label>Second Number: </label>
-          <input
-            onChange={(event) => {
-              setMinInput2(parseInt(event.currentTarget.value));
-            }}
-          />
+          Smallest Number: {JSON.stringify(determineMin(minInput1, minInput2))}
         </div>
-      </form>
-      <div>{JSON.stringify(minInput1)}</div>
-      <div>{JSON.stringify(minInput2)}</div>
-      <div>{JSON.stringify(determineMin(minInput1, minInput2))}</div>
+      </div>
     </>
   );
 };

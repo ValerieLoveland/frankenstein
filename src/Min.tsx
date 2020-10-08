@@ -6,12 +6,13 @@ export const Min = () => {
 
   return (
     <>
-      <header className="App-header">Smallest Number Calculator</header>
       <div className="form">
+        <header className="App-header">Smallest Number Calculator</header>
         <form className="sub" onSubmit={() => false}>
           <div>
             <label>First Number: </label>
             <input
+              className="field"
               onChange={(event) => {
                 setMinInput1(parseInt(event.currentTarget.value));
               }}

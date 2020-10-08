@@ -87,3 +87,8 @@ th {
   scroll-snap-type: y mandatory;
   scroll-snap-align: start;
 }
+
+.field {
+  text-align: right;
+  margin-right: 55px;
+}

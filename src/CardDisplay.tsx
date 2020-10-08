@@ -3,7 +3,7 @@ import { Card } from "./Card";
 
 const numberOfResults = 25;
 
-export const CardDisplay: React.FC = (props) => {
+export const CardDisplay: React.FC = () => {
   const [persons, setPersons] = useState<Person[]>([]);
 
   useEffect(() => {

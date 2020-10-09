@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { CardDisplay, FizzBuzz } from "./CardDisplay";
-import { MagSub } from "./MagSub";
-import { Min } from "./Min";
-import { TempConvert } from "./TempConvert";
+import { MagSub } from "./MagSub/MagSub";
+import { Min } from "./Min/Min";
+import { TempConvert } from "./TempConvert/TempConvert";
 
 function App(this: any) {
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "./Card";
+import { Card } from "./Card/Card";
 
 const numberOfResults = 25;
 
@@ -31,7 +31,7 @@ export const CardDisplay: React.FC = () => {
   });
 
   const listItems = map(filterPeople, (person) => (
-    <li className="container y-scroll" key={person.userName}>
+    <li className="card" key={person.userName}>
       <Card person={person} />
     </li>
   ));

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./TempConvert.css";
 
 export const TempConvert = () => {
   const [input, setInput] = useState<UserInput>({ value: 0, units: "F" });

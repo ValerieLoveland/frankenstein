@@ -7,7 +7,8 @@ export const MagSub = () => {
       <table>
         <tbody>
           <tr>
-            <th>Poem</th> <th>Magazine</th> <th>Date</th> <th>Submitted</th>{" "}
+            <th>Poem</th> <th>Magazine</th> <th>Date</th> <th>Submitted</th>
+            <th />{" "}
           </tr>
           {submission("Frosties", "Poetry Magazine", "7/20/2020")}
 

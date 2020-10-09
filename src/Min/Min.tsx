@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "/Users/vloveland/Desktop/work/frankenstein/src/Min/Min.css";
+import "./Min.css";
 
 export const Min = () => {
   const [minInput1, setMinInput1] = useState(0);
@@ -6,7 +8,7 @@ export const Min = () => {
 
   return (
     <>
-      <div className="form">
+      <div className="field">
         <header className="App-header">Smallest Number Calculator</header>
         <form className="sub" onSubmit={() => false}>
           <div>
@@ -22,6 +24,7 @@ export const Min = () => {
           <div>
             <label>Second Number: </label>
             <input
+              className="field"
               onChange={(event) => {
                 setMinInput2(parseInt(event.currentTarget.value));
               }}

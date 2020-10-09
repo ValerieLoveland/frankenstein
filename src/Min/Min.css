@@ -1,0 +1,12 @@
+.sub {
+  padding: 5px;
+}
+
+.field {
+  text-align: right;
+  margin-right: 55px;
+  background-color: white;
+  border: 1px solid #94939e;
+  box-sizing: border-box;
+  border-radius: 4px;
+}

@@ -1,11 +1,12 @@
-import { Person } from "./CardDisplay";
+import { Person } from "../CardDisplay";
 import React from "react";
+import "./Card.css";
 
 export const Card: React.FC<CardProps> = (props) => {
   const { person } = props;
 
   return (
-    <div className="card">
+    <div className="ul-style card">
       <div>
         {person.name} {person.lastName}
       </div>

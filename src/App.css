@@ -14,24 +14,6 @@ main {
   font-size: 23px;
 }
 
-.temp-text {
-  font-size: calc(10px + 2vmin);
-  padding: 10px;
-}
-
-.form {
-  padding: 10px;
-  background: white;
-  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.24);
-}
-
-.input {
-  background-color: #e7f0fa;
-  border: 1px solid #94939e;
-  box-sizing: border-box;
-  border-radius: 4px;
-}
-
 .bar {
   background-color: black;
   color: white;
@@ -57,24 +39,8 @@ a:hover {
   text-decoration: none;
 }
 
-.ul-style {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  align-items: center;
-  list-style-type: none;
-}
-
-.card {
-  background-color: white;
-  padding: 10px 40px 10px 40px;
-  margin: 10px 0;
-}
 .mb-5 {
   margin-bottom: 5px;
-}
-
-.sub {
-  padding: 5px;
 }
 
 td,
@@ -86,9 +52,4 @@ th {
 .y-scroll .element {
   scroll-snap-type: y mandatory;
   scroll-snap-align: start;
-}
-
-.field {
-  text-align: right;
-  margin-right: 55px;
 }

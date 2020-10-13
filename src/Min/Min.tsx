@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "/Users/vloveland/Desktop/work/frankenstein/src/Min/Min.css";
 import "./Min.css";
-import { LayoutColor } from "../Layout";
+import { LayoutColor } from "../shared/Layout";
 
 export const Min = () => {
   const [minInput1, setMinInput1] = useState(0);

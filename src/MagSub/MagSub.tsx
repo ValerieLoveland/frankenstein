@@ -1,5 +1,5 @@
 import React from "react";
-import { LayoutColor } from "../Layout";
+import { LayoutColor } from "../shared/Layout";
 
 export const MagSub = () => {
   return (

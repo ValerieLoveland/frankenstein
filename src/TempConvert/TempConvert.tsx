@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { LayoutColor } from "../Layout";
+import { LayoutColor } from "../shared/Layout";
 import "./TempConvert.css";
 
 export const TempConvert = () => {

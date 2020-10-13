@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "/Users/vloveland/Desktop/work/frankenstein/src/Min/Min.css";
 import "./Min.css";
+import { LayoutColor } from "../Layout";
 
 export const Min = () => {
   const [minInput1, setMinInput1] = useState(0);
@@ -8,35 +9,38 @@ export const Min = () => {
 
   return (
     <>
-      <div className="field">
-        <header className="App-header">Smallest Number Calculator</header>
-        <form className="sub" onSubmit={() => false}>
-          <div>
-            <label>First Number: </label>
-            <input
-              className="field"
-              onChange={(event) => {
-                setMinInput1(parseInt(event.currentTarget.value));
-              }}
-            />
-          </div>
-
-          <div>
-            <label>Second Number: </label>
-            <input
-              className="field"
-              onChange={(event) => {
-                setMinInput2(parseInt(event.currentTarget.value));
-              }}
-            />
-          </div>
-        </form>
-        {/* <div>{JSON.stringify(minInput1)}</div>
-      <div>{JSON.stringify(minInput2)}</div> */}
+      <LayoutColor>
         <div>
-          Smallest Number: {JSON.stringify(determineMin(minInput1, minInput2))}
+          <header>Smallest Number Calculator</header>
+          <form className="sub" onSubmit={() => false}>
+            <div>
+              <label>First Number: </label>
+              <input
+                className="field"
+                onChange={(event) => {
+                  setMinInput1(parseInt(event.currentTarget.value));
+                }}
+              />
+            </div>
+
+            <div>
+              <label>Second Number: </label>
+              <input
+                className="field"
+                onChange={(event) => {
+                  setMinInput2(parseInt(event.currentTarget.value));
+                }}
+              />
+            </div>
+          </form>
+          {/* <div>{JSON.stringify(minInput1)}</div>
+      <div>{JSON.stringify(minInput2)}</div> */}
+          <div>
+            Smallest Number:{" "}
+            {JSON.stringify(determineMin(minInput1, minInput2))}
+          </div>
         </div>
-      </div>
+      </LayoutColor>
     </>
   );
 };

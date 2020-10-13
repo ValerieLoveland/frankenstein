@@ -1,45 +1,48 @@
 import React, { useState } from "react";
+import { LayoutColor } from "../Layout";
 import "./TempConvert.css";
 
 export const TempConvert = () => {
   const [input, setInput] = useState<UserInput>({ value: 0, units: "F" });
 
   return (
-    <div className="form">
-      <header className="App-header">Temperature Converter</header>
-      <form onSubmit={() => false}>
-        <div>
+    <LayoutColor>
+      <div>
+        <header className="App-header">Temperature Converter</header>
+        <form onSubmit={() => false}>
+          <div>
+            <p>
+              <label> Convert Farenheit</label>
+            </p>
+            <input
+              className="input"
+              onChange={(event) => {
+                setInput({
+                  value: parseInt(event.currentTarget.value),
+                  units: "F",
+                });
+              }}
+              value={convert(input, "F")}
+            />
+          </div>
+
           <p>
-            <label> Convert Farenheit</label>
+            <label>Convert Celsius</label>
           </p>
           <input
             className="input"
             onChange={(event) => {
               setInput({
                 value: parseInt(event.currentTarget.value),
-                units: "F",
+                units: "C",
               });
             }}
-            value={convert(input, "F")}
+            value={convert(input, "C")}
           />
-        </div>
-
-        <p>
-          <label>Convert Celsius</label>
-        </p>
-        <input
-          className="input"
-          onChange={(event) => {
-            setInput({
-              value: parseInt(event.currentTarget.value),
-              units: "C",
-            });
-          }}
-          value={convert(input, "C")}
-        />
-      </form>
-      <div className="temp-text">{JSON.stringify(input)}</div>
-    </div>
+        </form>
+        <div className="temp-text">{JSON.stringify(input)}</div>
+      </div>
+    </LayoutColor>
   );
 };
 

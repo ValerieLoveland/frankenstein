@@ -1,23 +1,26 @@
 import React from "react";
+import { LayoutColor } from "../Layout";
 
 export const MagSub = () => {
   return (
-    <div className="card sub">
-      <h1 style={{ textAlign: "center" }}>Poetry Submissions</h1>
-      <table>
-        <tbody>
-          <tr>
-            <th>Poem</th> <th>Magazine</th> <th>Date</th> <th>Submitted</th>
-            <th />{" "}
-          </tr>
-          {submission("Frosties", "Poetry Magazine", "7/20/2020")}
+    <LayoutColor>
+      <div className=" sub">
+        <h1 style={{ textAlign: "center" }}>Poetry Submissions</h1>
+        <table>
+          <tbody>
+            <tr>
+              <th>Poem</th> <th>Magazine</th> <th>Date</th> <th>Submitted</th>
+              <th />{" "}
+            </tr>
+            {submission("Frosties", "Poetry Magazine", "7/20/2020")}
 
-          {submission("Slap Bracelets", "Kenyon Review", "08/15/2020")}
+            {submission("Slap Bracelets", "Kenyon Review", "08/15/2020")}
 
-          {submission("Grabber", "American Poetry Review", "09/15/2020")}
-        </tbody>
-      </table>
-    </div>
+            {submission("Grabber", "American Poetry Review", "09/15/2020")}
+          </tbody>
+        </table>
+      </div>
+    </LayoutColor>
   );
 };
 

@@ -1,17 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import "./App.css";
-import { CardDisplay, FizzBuzz } from "./CardDisplay";
-import { MagSub } from "./MagSub/MagSub";
-import { Min } from "./Min/Min";
-import { TempConvert } from "./TempConvert/TempConvert";
+import { Users, FizzBuzz } from "./Users/Users";
+import { MagazineSubmission } from "./MagazineSubmission/MagazineSubmission";
+import { MinimumNumber } from "./MinimumNumber/MinimumNumber";
+import { TemperatureConverter } from "./TemperatureConverter/TemperatureConverter";
 
 function App(this: any) {
   return (
     <div className="App">
       <Router>
         <nav>
-          <ul className="bar">
+          <ul className="nav-bar">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -19,7 +19,7 @@ function App(this: any) {
               <Link to="/temp-convert">Temperature Converter</Link>
             </li>
             <li>
-              <Link to="/card-display/1">Card Display</Link>
+              <Link to="/users/1">Users</Link>
             </li>
             <li>
               <Link to="/min">Minimum Number</Link>
@@ -33,15 +33,15 @@ function App(this: any) {
         <main>
           <Switch>
             <Route path="/temp-convert">
-              <TempConvert />
+              <TemperatureConverter />
             </Route>
             <Route path="/min">
-              <Min />
+              <MinimumNumber />
             </Route>
             <Route path="/mag-sub">
-              <MagSub />
+              <MagazineSubmission />
             </Route>
-            <Route path="/card-display/:id" children={<CardDisplay />} />
+            <Route path="/users/:id" children={<Users />} />
             <Route path="/">
               <div>Hello!</div>
             </Route>

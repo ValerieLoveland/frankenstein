@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-import "/Users/vloveland/Desktop/work/frankenstein/src/Min/Min.css";
-import "./Min.css";
-import { LayoutColor } from "../shared/Layout";
+import "./MinimumNumber.css";
+import { Card } from "../shared/Card";
 
-export const Min = () => {
+export const MinimumNumber = () => {
   const [minInput1, setMinInput1] = useState(0);
   const [minInput2, setMinInput2] = useState(0);
 
   return (
     <>
-      <LayoutColor>
+      <Card title="Minimum Number Calculator">
         <div>
-          <header>Smallest Number Calculator</header>
           <form className="sub" onSubmit={() => false}>
             <div>
               <label>First Number: </label>
@@ -33,14 +31,12 @@ export const Min = () => {
               />
             </div>
           </form>
-          {/* <div>{JSON.stringify(minInput1)}</div>
-      <div>{JSON.stringify(minInput2)}</div> */}
           <div>
             Smallest Number:{" "}
             {JSON.stringify(determineMin(minInput1, minInput2))}
           </div>
         </div>
-      </LayoutColor>
+      </Card>
     </>
   );
 };

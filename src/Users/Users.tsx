@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "./Card/Card";
+import { PersonCard } from "./PersonCard";
 
 const numberOfResults = 25;
 
-export const CardDisplay: React.FC = () => {
+export const Users: React.FC = () => {
   const [persons, setPersons] = useState<Person[]>([]);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export const CardDisplay: React.FC = () => {
 
   const listItems = map(filterPeople, (person) => (
     <li className="card" key={person.userName}>
-      <Card person={person} />
+      <PersonCard person={person} />
     </li>
   ));
 

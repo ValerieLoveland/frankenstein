@@ -14,7 +14,7 @@ main {
   font-size: 23px;
 }
 
-.bar {
+.nav-bar {
   background-color: black;
   color: white;
   display: flex;
@@ -35,7 +35,7 @@ a {
 }
 
 a:hover {
-  color: red;
+  color: gray;
   text-decoration: none;
 }
 

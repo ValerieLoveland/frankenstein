@@ -1,11 +1,10 @@
 import React from "react";
-import { LayoutColor } from "../shared/Layout";
+import { Card } from "../shared/Card";
 
-export const MagSub = () => {
+export const MagazineSubmission = () => {
   return (
-    <LayoutColor>
+    <Card title="Poetry Submissions">
       <div className=" sub">
-        <h1 style={{ textAlign: "center" }}>Poetry Submissions</h1>
         <table>
           <tbody>
             <tr>
@@ -20,7 +19,7 @@ export const MagSub = () => {
           </tbody>
         </table>
       </div>
-    </LayoutColor>
+    </Card>
   );
 };
 

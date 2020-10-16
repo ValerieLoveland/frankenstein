@@ -1,13 +1,13 @@
-import { Person } from "../CardDisplay";
+import { Person } from "./Users";
 import React from "react";
-import "./Card.css";
-import { LayoutColor } from "../shared/Layout";
+import "./PersonCard.css";
+import { Card } from "../shared/Card";
 
-export const Card: React.FC<CardProps> = (props) => {
+export const PersonCard: React.FC<PersonCardProps> = (props) => {
   const { person } = props;
 
   return (
-    <LayoutColor>
+    <Card>
       <div className="ul-style card">
         <div>
           {person.name} {person.lastName}
@@ -16,10 +16,10 @@ export const Card: React.FC<CardProps> = (props) => {
 
         <img src={person.avatar} alt="headshot of person" />
       </div>
-    </LayoutColor>
+    </Card>
   );
 };
 
-export interface CardProps {
+export interface PersonCardProps {
   person: Person;
 }

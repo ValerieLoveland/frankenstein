@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import { LayoutColor } from "../shared/Layout";
-import "./TempConvert.css";
+import { Card } from "../shared/Card";
+import "./TemperatureConverter.css";
 
-export const TempConvert = () => {
+export const TemperatureConverter = () => {
   const [input, setInput] = useState<UserInput>({ value: 0, units: "F" });
 
   return (
-    <LayoutColor>
+    <Card title="Temperature Converter">
       <div>
-        <header className="App-header">Temperature Converter</header>
         <form onSubmit={() => false}>
           <div>
             <p>
@@ -40,9 +39,8 @@ export const TempConvert = () => {
             value={convert(input, "C")}
           />
         </form>
-        <div className="temp-text">{JSON.stringify(input)}</div>
       </div>
-    </LayoutColor>
+    </Card>
   );
 };
 

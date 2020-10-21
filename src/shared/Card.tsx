@@ -11,7 +11,7 @@ export const Card: React.FC<CardProps> = (props) => {
     >
       <header
         style={{
-          color: "red",
+          color: "black",
           fontSize: "25px",
           padding: "15px",
           display: "flex",

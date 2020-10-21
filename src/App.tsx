@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import "./App.css";
-import { Users, FizzBuzz } from "./Users/Users";
 import { MagazineSubmission } from "./MagazineSubmission/MagazineSubmission";
 import { MinimumNumber } from "./MinimumNumber/MinimumNumber";
 import { TemperatureConverter } from "./TemperatureConverter/TemperatureConverter";
+import { Users } from "./Users/Users";
 
 function App(this: any) {
   return (

@@ -20,7 +20,6 @@ export const Users: React.FC = () => {
             };
           });
           setPersons(persons);
-          FizzBuzz();
         });
       }
     );
@@ -55,19 +54,4 @@ function map<T, R>(arr: T[], iteratee: (item: T) => R): R[] {
   }
 
   return newArr;
-}
-
-export function FizzBuzz() {
-  for (let i = 0; i < 99; i++) {
-    let num = i + 1;
-    if (num % 3 === 0 && num % 5 === 0) {
-      console.log("fizzbuzz");
-    } else if (num % 3 === 0) {
-      console.log("fizz");
-    } else if (num % 5 === 0) {
-      console.log("buzz");
-    } else {
-      console.log(i + 1);
-    }
-  }
 }

@@ -6,7 +6,7 @@ export const Card: React.FC<CardProps> = (props) => {
       style={{
         backgroundColor: "white",
         fontSize: "16px",
-        padding: "20px 20px 40px 40px",
+        padding: "20px ",
       }}
     >
       <header

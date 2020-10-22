@@ -7,7 +7,7 @@ export const TemperatureConverter = () => {
 
   return (
     <Card title="Temperature Converter">
-      <div>
+      <div className="l-shaped-padding">
         <form onSubmit={() => false}>
           <div>
             <p>

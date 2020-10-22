@@ -30,12 +30,12 @@ export const Users: React.FC = () => {
   });
 
   const listItems = map(filterPeople, (person) => (
-    <li className="card" key={person.userName}>
+    <li key={person.userName}>
       <PersonCard person={person} />
     </li>
   ));
 
-  return <ul className="ul-style">{listItems}</ul>;
+  return <ul>{listItems}</ul>;
 };
 
 export type Person = {

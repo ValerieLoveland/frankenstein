@@ -9,22 +9,21 @@ export const MinimumNumber = () => {
   return (
     <>
       <Card title="Minimum Number Calculator">
-        <div>
-          <form className="sub" onSubmit={() => false}>
+        <div className="l-shaped-padding">
+          <form className="inputs-padding " onSubmit={() => false}>
             <div>
               <label>First Number: </label>
               <input
-                className="field"
+                className="input line-up"
                 onChange={(event) => {
                   setMinInput1(parseInt(event.currentTarget.value));
                 }}
               />
             </div>
-
             <div>
               <label>Second Number: </label>
               <input
-                className="field"
+                className="input line-up"
                 onChange={(event) => {
                   setMinInput2(parseInt(event.currentTarget.value));
                 }}

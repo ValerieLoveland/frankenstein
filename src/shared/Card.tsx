@@ -7,6 +7,7 @@ export const Card: React.FC<CardProps> = (props) => {
         backgroundColor: "white",
         fontSize: "16px",
         padding: "20px ",
+        listStyleType: "none",
       }}
     >
       <header

@@ -19,6 +19,7 @@ main {
 }
 
 .nav-bar {
+  font-family: "Grandstander", cursive;
   background-color: black;
   color: white;
   display: flex;

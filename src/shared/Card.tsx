@@ -13,7 +13,6 @@ export const Card: React.FC<CardProps> = (props) => {
         style={{
           color: "black",
           fontSize: "25px",
-          padding: "15px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

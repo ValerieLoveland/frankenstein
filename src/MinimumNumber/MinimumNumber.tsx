@@ -9,7 +9,7 @@ export const MinimumNumber = () => {
   return (
     <>
       <Card title="Minimum Number Calculator">
-        <div className="l-shaped-padding">
+        <div>
           <form className="inputs-padding " onSubmit={() => false}>
             <div>
               <label>First Number: </label>

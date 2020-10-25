@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { PersonCard } from "./PersonCard";
+import "./Users.css";
 
 const numberOfResults = 25;
 
@@ -30,7 +31,7 @@ export const Users: React.FC = () => {
   });
 
   const listItems = map(filterPeople, (person) => (
-    <li key={person.userName}>
+    <li className="style-users" key={person.userName}>
       <PersonCard person={person} />
     </li>
   ));

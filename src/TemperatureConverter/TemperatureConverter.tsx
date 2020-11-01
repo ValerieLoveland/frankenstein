@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { Card } from "../shared/Card";
-import "./TemperatureConverter.css";
 
 export const TemperatureConverter = () => {
   const [input, setInput] = useState<UserInput>({ value: 0, units: "F" });
 
   return (
     <Card title="Temperature Converter">
-      <div className="l-shaped-padding">
+      <div>
         <form onSubmit={() => false}>
           <div>
             <p>

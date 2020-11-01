@@ -2,15 +2,6 @@
   padding: 20px 0;
 }
 
-.input {
-  text-align: right;
-  margin-right: 55px;
-  background-color: white;
-  border: 1px solid #94939e;
-  box-sizing: border-box;
-  border-radius: 4px;
-}
-
 .line-up {
   position: relative;
 }

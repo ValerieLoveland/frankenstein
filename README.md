@@ -45,10 +45,10 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 To do list
 bem naming
-move font further up in the project and use stye body should only be in one place
-material ui blueprint bootstrap
+material ui blueprint
 put submission in its own column
 show title conditionally
 change font back
+input/field component?
 
 done

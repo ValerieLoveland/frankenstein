@@ -1,24 +1,23 @@
 import React from "react";
 import { Card } from "../shared/Card";
+import "./MagazineSubmission.css";
 
 export const MagazineSubmission = () => {
   return (
     <Card title="Poetry Submissions">
-      <div className=" sub">
-        <table>
-          <tbody>
-            <tr>
-              <th>Poem</th> <th>Magazine</th> <th>Date</th> <th>Submitted</th>
-              <th />{" "}
-            </tr>
-            {submission("Frosties", "Poetry Magazine", "7/20/2020")}
+      <table className="submissions">
+        <tbody>
+          <tr>
+            <th>Poem</th> <th>Magazine</th> <th>Date</th> <th>Submitted</th>
+            <th />{" "}
+          </tr>
+          {submission("Frosties", "Poetry Magazine", "7/20/2020")}
 
-            {submission("Slap Bracelets", "Kenyon Review", "08/15/2020")}
+          {submission("Slap Bracelets", "Kenyon Review", "08/15/2020")}
 
-            {submission("Grabber", "American Poetry Review", "09/15/2020")}
-          </tbody>
-        </table>
-      </div>
+          {submission("Grabber", "American Poetry Review", "09/15/2020")}
+        </tbody>
+      </table>
     </Card>
   );
 };

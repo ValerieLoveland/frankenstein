@@ -14,7 +14,6 @@ export const MinimumNumber = () => {
             <div>
               <label>First Number: </label>
               <input
-                className="input line-up"
                 onChange={(event) => {
                   setMinInput1(parseInt(event.currentTarget.value));
                 }}
@@ -23,7 +22,6 @@ export const MinimumNumber = () => {
             <div>
               <label>Second Number: </label>
               <input
-                className="input line-up"
                 onChange={(event) => {
                   setMinInput2(parseInt(event.currentTarget.value));
                 }}

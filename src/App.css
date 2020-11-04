@@ -26,6 +26,7 @@ main {
   list-style-type: none;
   padding: 0;
 }
+
 a {
   color: white;
   text-decoration: none;
@@ -38,15 +39,6 @@ a:hover {
 
 .mb-5 {
   margin-bottom: 5px;
-}
-
-td,
-th {
-  text-align: left;
-  padding: 15px 30px;
-}
-th {
-  font-size: 20px;
 }
 
 body {

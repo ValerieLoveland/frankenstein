@@ -13,7 +13,6 @@ export const TemperatureConverter = () => {
               <label> Convert Farenheit</label>
             </p>
             <input
-              className="input"
               onChange={(event) => {
                 setInput({
                   value: parseInt(event.currentTarget.value),
@@ -28,7 +27,6 @@ export const TemperatureConverter = () => {
             <label>Convert Celsius</label>
           </p>
           <input
-            className="input"
             onChange={(event) => {
               setInput({
                 value: parseInt(event.currentTarget.value),

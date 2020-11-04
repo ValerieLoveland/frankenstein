@@ -1,0 +1,9 @@
+.submissions td,
+th {
+  text-align: left;
+  padding: 15px 30px;
+}
+
+.submissions th {
+  font-size: 20px;
+}

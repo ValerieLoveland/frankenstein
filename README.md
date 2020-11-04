@@ -50,5 +50,6 @@ put submission in its own column
 show title conditionally
 change font back
 input/field component?
+nav bar own component
 
 done

@@ -7,34 +7,31 @@ export const MinimumNumber = () => {
   const [minInput2, setMinInput2] = useState(0);
 
   return (
-    <>
-      <Card title="Minimum Number Calculator">
-        <div>
-          <form className="inputs-padding " onSubmit={() => false}>
-            <div>
-              <label>First Number: </label>
-              <input
-                onChange={(event) => {
-                  setMinInput1(parseInt(event.currentTarget.value));
-                }}
-              />
-            </div>
-            <div>
-              <label>Second Number: </label>
-              <input
-                onChange={(event) => {
-                  setMinInput2(parseInt(event.currentTarget.value));
-                }}
-              />
-            </div>
-          </form>
+    <Card title="Minimum Number Calculator">
+      <div>
+        <form className="inputs-padding" onSubmit={() => false}>
           <div>
-            Smallest Number:{" "}
-            {JSON.stringify(determineMin(minInput1, minInput2))}
+            <label>First Number: </label>
+            <input
+              onChange={(event) => {
+                setMinInput1(parseInt(event.currentTarget.value));
+              }}
+            />
           </div>
+          <div>
+            <label>Second Number: </label>
+            <input
+              onChange={(event) => {
+                setMinInput2(parseInt(event.currentTarget.value));
+              }}
+            />
+          </div>
+        </form>
+        <div>
+          Smallest Number: {JSON.stringify(determineMin(minInput1, minInput2))}
         </div>
-      </Card>
-    </>
+      </div>
+    </Card>
   );
 };
 

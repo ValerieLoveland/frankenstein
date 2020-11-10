@@ -49,7 +49,9 @@ material ui blueprint
 put submission in its own column
 show title conditionally
 input/field component?
-nav bar own component
+style sheet for card component
+submission component
 
 done
 change font back
+nav bar own component

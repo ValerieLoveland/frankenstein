@@ -47,11 +47,11 @@ To do list
 bem naming
 material ui blueprint
 put submission in its own column
-show title conditionally
 input/field component?
 style sheet for card component
 submission component
 
 done
+show title conditionally
 change font back
 nav bar own component

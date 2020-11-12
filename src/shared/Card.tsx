@@ -9,17 +9,19 @@ export const Card: React.FC<CardProps> = (props) => {
         padding: "20px ",
       }}
     >
-      <header
-        style={{
-          color: "black",
-          fontSize: "25px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        {props.title}
-      </header>
+      {props.title && (
+        <header
+          style={{
+            color: "black",
+            fontSize: "25px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {props.title}
+        </header>
+      )}
       <div>{props.children}</div>
     </div>
   );

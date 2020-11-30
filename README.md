@@ -50,6 +50,7 @@ put submission in its own column
 input/field component?
 style sheet for card component
 submission component
+fizzbuzz
 
 done
 show title conditionally

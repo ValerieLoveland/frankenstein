@@ -26,13 +26,15 @@ export const submissionFunction = function (
 
   if (daysOut > 30) {
     return (
-      <tr>
-        <td>{poem}</td>
-        <td>{magazine}</td>
-        <td>{startDate}</td>
-        <td>{daysOut} days out*</td>
-        <td>*Query {magazine}.</td>
-      </tr>
+      <>
+        <tr>
+          <td>{poem}</td>
+          <td>{magazine}</td>
+          <td>{startDate}</td>
+          <td>{daysOut} days out*</td>
+          <td>*Query {magazine}.</td>
+        </tr>
+      </>
     );
   } else {
     return (

@@ -7,13 +7,20 @@ export const MagazineSubmission = () => {
   return (
     <Card title="Poetry Submissions">
       <table className="submissions">
-        <thead>
-          <tr>
-            <th>Poem</th> <th>Magazine</th> <th>Date</th> <th>Submitted</th>
-            <th />
-          </tr>
-        </thead>
         <tbody>
+          <thead>
+            <tr>
+              <th>Poem</th> <th>Magazine</th> <th>Date</th> <th>Submitted</th>
+              <th />
+            </tr>
+          </thead>
+          <Submission
+            submission={{
+              poem: "Frosties",
+              magazine: "Poetry Magazine",
+              startDate: "7/20/2020",
+            }}
+          />
           <Submission
             submission={{
               poem: "Frosties",

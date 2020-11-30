@@ -3,13 +3,13 @@ import React from "react";
 export const Submission: React.FC<SubmissionProps> = (props) => {
   const { submission } = props;
   return (
-    <div>
+    <tr>
       {submissionFunction(
         submission.poem,
         submission.magazine,
         submission.startDate
       )}
-    </div>
+    </tr>
   );
 };
 
@@ -41,6 +41,7 @@ export const submissionFunction = function (
         <td>{magazine}</td>
         <td>{startDate}</td>
         <td>{daysOut} days out</td>
+        <td />
       </tr>
     );
   }

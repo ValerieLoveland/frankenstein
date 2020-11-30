@@ -7,11 +7,13 @@ export const MagazineSubmission = () => {
   return (
     <Card title="Poetry Submissions">
       <table className="submissions">
-        <tbody>
+        <thead>
           <tr>
             <th>Poem</th> <th>Magazine</th> <th>Date</th> <th>Submitted</th>
-            <th />{" "}
+            <th />
           </tr>
+        </thead>
+        <tbody>
           <Submission
             submission={{
               poem: "Frosties",

@@ -39,6 +39,9 @@ export const NavBar: React.FC = () => {
           <li>
             <Link to="/mag-sub">Magazine Submissions</Link>
           </li>
+          <li>
+            <Link to="/mag-sub">Fizz Buzz</Link>
+          </li>
         </ul>
       </nav>
       <div style={{ height: "50px" }} />

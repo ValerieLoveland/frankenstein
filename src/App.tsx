@@ -23,6 +23,9 @@ function App(this: any) {
             <Route path="/mag-sub">
               <MagazineSubmission />
             </Route>
+            <Route path="/fizzbuzz">
+              <MinimumNumber />
+            </Route>
             <Route path="/users/:id" children={<Users />} />
             <Route path="/">
               <div>Hello!</div>

@@ -6,14 +6,12 @@ import { Submission } from "./Submission";
 export const MagazineSubmission = () => {
   return (
     <Card title="Poetry Submissions">
-      <table className="submissions">
-        <tbody>
-          <thead>
-            <tr>
-              <th>Poem</th> <th>Magazine</th> <th>Date</th> <th>Submitted</th>
-              <th />
-            </tr>
-          </thead>
+      <table>
+        <thead>
+          <th>Poem</th> <th>Magazine</th> <th>Date</th> <th>Submitted</th>
+          <th />
+        </thead>
+        <tbody className="submissions">
           <Submission
             submission={{
               poem: "Frosties",
@@ -23,9 +21,9 @@ export const MagazineSubmission = () => {
           />
           <Submission
             submission={{
-              poem: "Frosties",
-              magazine: "Poetry Magazine",
-              startDate: "7/20/2020",
+              poem: "Slap Bracelets",
+              magazine: "Paris Review",
+              startDate: "11/20/2020",
             }}
           />
         </tbody>

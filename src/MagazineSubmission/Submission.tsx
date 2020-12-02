@@ -2,23 +2,8 @@ import React from "react";
 
 export const Submission: React.FC<SubmissionProps> = (props) => {
   const { submission } = props;
-  return (
-    <tr>
-      {submissionFunction(
-        submission.poem,
-        submission.magazine,
-        submission.startDate
-      )}
-    </tr>
-  );
-};
 
-export const submissionFunction = function (
-  poem: string,
-  magazine: string,
-  startDate: string
-) {
-  let alteredStartDate = Date.parse(startDate);
+  let alteredStartDate = Date.parse(submission.startDate);
   let currentDate = Date.now();
   console.log(`altered ${alteredStartDate} current ${currentDate}`);
 
@@ -26,27 +11,25 @@ export const submissionFunction = function (
 
   if (daysOut > 30) {
     return (
-      <>
-        <tr>
-          <td>{poem}</td>
-          <td>{magazine}</td>
-          <td>{startDate}</td>
-          <td>{daysOut} days out*</td>
-          <td>*Query {magazine}.</td>
-        </tr>
-      </>
-    );
-  } else {
-    return (
       <tr>
-        <td>{poem}</td>
-        <td>{magazine}</td>
-        <td>{startDate}</td>
-        <td>{daysOut} days out</td>
-        <td />
+        <td>{submission.poem}</td>
+        <td>{submission.magazine}</td>
+        <td>{submission.startDate}</td>
+        <td>{daysOut} days out*</td>
+        <td>*Query {submission.magazine}.</td>
       </tr>
     );
   }
+
+  return (
+    <tr>
+      <td>{submission.poem}</td>
+      <td>{submission.magazine}</td>
+      <td>{submission.startDate}</td>
+      <td>{daysOut} days out</td>
+      <td />
+    </tr>
+  );
 };
 
 const calculateDays = (

@@ -40,7 +40,7 @@ export const NavBar: React.FC = () => {
             <Link to="/mag-sub">Magazine Submissions</Link>
           </li>
           <li>
-            <Link to="/mag-sub">Fizz Buzz</Link>
+            <Link to="/fizz-buzz">Fizz Buzz</Link>
           </li>
         </ul>
       </nav>

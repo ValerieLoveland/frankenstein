@@ -6,6 +6,7 @@ import { MagazineSubmission } from "./MagazineSubmission/MagazineSubmission";
 import { MinimumNumber } from "./MinimumNumber/MinimumNumber";
 import { TemperatureConverter } from "./TemperatureConverter/TemperatureConverter";
 import { Users } from "./Users/Users";
+import { Fizzbuzz } from "./FizzBuzz/FizzBuzz";
 
 function App(this: any) {
   return (
@@ -23,8 +24,8 @@ function App(this: any) {
             <Route path="/mag-sub">
               <MagazineSubmission />
             </Route>
-            <Route path="/fizzbuzz">
-              <MinimumNumber />
+            <Route path="/fizz-buzz">
+              <Fizzbuzz />
             </Route>
             <Route path="/users/:id" children={<Users />} />
             <Route path="/">

@@ -25,17 +25,11 @@ function fizzbuzzOutput() {
     } else {
       fizzBuzzArr.push((i + 1).toString());
     }
-    console.log(fizzBuzzArr[i]);
   }
-  return fizzBuzzArr;
-}
+  console.log(fizzBuzzArr);
+  const listItems = fizzBuzzArr.map((fizzOrBuzz) => (
+    <li key={fizzOrBuzz}>{fizzOrBuzz}</li>
+  ));
 
-function map<T, R>(arr: T[], iteratee: (item: T) => R): R[] {
-  const newArr = [];
-  for (let index = 0; index < arr.length; index++) {
-    let result = iteratee(arr[index]);
-    newArr.push(result);
-  }
-
-  return newArr;
+  return <ul>{listItems}</ul>;
 }
